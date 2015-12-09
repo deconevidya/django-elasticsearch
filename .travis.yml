@@ -11,5 +11,4 @@ services:
   - elasticsearch
 script:
   - "py.test --cov=djelastic"
-after-success:
-  - coveralls
+
