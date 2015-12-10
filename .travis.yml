@@ -4,12 +4,15 @@ python:
   - "3.3"
   - "3.4"
 env:
+ global:
   - DJANGO_VERSION=1.7
+  - secure: jUkgYE7AlskJBS6Qzbr4Fuv9uHOR4AMC8/XSiLOvDeUPVea6+qy1A0je5lBEkV943aVZdoa7a+BNlLxVb6M9zWmot12CR3PUi2fV1HWZ6HzTmPN2rx7JmCowsnBS2y+f3uTpxYL67s4gL7B5AzwJ5wk7NOArysFKes5blC+6/834PrWkToHb25fw6aCfXqqmxqX+F54MLy+PuSukrD3ChZmIbmjpcoU9xA+kGepnlaUKCUgjo6djuANrMrePi/HHNi/ufxI7wSlVSeZ2VkyUDeLV1HipKsEoohj545alTSijzVtFbbByGGSZJdGmDsCRMXpG52dfGLOwxRzVAW/JAQ== 
 install:
   - "pip install -r requirements-dev.txt"
 services:
   - elasticsearch
 script:
   - "py.test --cov=djelastic"
+  - echo $key1
 
 build_image: drydock/u14pytpls:prod
