@@ -12,3 +12,4 @@ services:
 script:
   - "py.test --cov=djelastic"
 
+build_image: drydock/u14pytpls:prod
